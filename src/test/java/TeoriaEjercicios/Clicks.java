@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -48,4 +49,10 @@ public class Clicks {
 		// Accept the alert displayed
 		//driver.switchTo().alert().accept();
 	}
+	
+	@AfterTest
+	public void tearDown() throws Exception {
+		driver.quit();
+	   
+	  }
 }
